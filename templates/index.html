@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BCA Student Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+<script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">BCA Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="background-animation">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="container hero-content">
+            <h1>BCA Student & Web Developer</h1>
+            <p class="hero-subtitle">Building secure web applications with Python, Java, HTML, and CSS</p>
+            <p>I'm a first-year BCA student passionate about web development and cybersecurity. I specialize in creating secure web applications using Python, Java, HTML, and CSS while continuously expanding my knowledge in cybersecurity practices.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me(don't ever think)</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div>
+                    <p>Hello! I'm a first-year BCA student with a passion for web development and cybersecurity. I'm currently building my skills in Python, Java, HTML, and CSS while exploring the fascinating world of cybersecurity.</p>
+                    <p>When I'm not studying or coding, you can find me learning about security best practices, experimenting with new web technologies, or working on personal projects that combine development with security principles.</p>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Web Security</span>
+                        <span class="skill-tag">Cybersecurity Basics</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Linux Basics</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/500x400?text=Developer+Working" alt="Developer working on laptop" class="about-img" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <p>Here are some of the projects I've worked on as a BCA student, showcasing my skills in Python, Java, web development, and cybersecurity concepts.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://via.placeholder.com/400x300?text=Secure+Login+System" alt="Secure Login System" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Secure Login System</h3>
+                        <p class="project-description">A Python-based authentication system with password hashing, input validation, and basic security measures to prevent common web vulnerabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Hashing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://via.placeholder.com/400x300?text=Portfolio+Website" alt="Portfolio Website" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Student Portfolio Website</h3>
+                        <p class="project-description">A responsive personal portfolio website built with HTML, CSS, and JavaScript, implementing security headers and following web accessibility guidelines.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://via.placeholder.com/400x300?text=Security+Scanner" alt="Security Scanner Tool" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Security Scanner Tool</h3>
+                        <p class="project-description">A basic Python tool that scans websites for common security headers and vulnerabilities, helping developers improve their web application security.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Web Scanning</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                <ul class="flash-messages">
+                  {% for category, message in messages %}
+                    <li class="flash-{{ category }}">{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+            <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>student.developer@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 26262626</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="{{ url_for('contact') }}" method="post" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-dev"></i></a>
+            </div>
+            <p>© 2023 BCA Student Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
