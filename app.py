@@ -9,16 +9,16 @@ def home():
 
 @app.route('/contact', methods=['POST'])
 def contact():
-    naam = request.form.get('naam')
+    name = request.form.get('name')
     gmail = request.form.get('gmail')
     message = request.form.get('message')
 
-    if not name or not email or not message:
+    if not name or not gmail or not message:
         flash('Please fill all the fields.', 'error')
         return redirect(url_for('home'))
 
     # Here you can add logic to save the message or send email
-    print(f"New message from {name} ({email}): {message}")
+    print(f"New message from {name} ({gmail}): {message}")
 
     flash(f'Thank you, {name}! Your message has been received.', 'success')
     return redirect(url_for('home'))
